@@ -1,0 +1,47 @@
+# --- Build outputs / binaries ---
+*.exe
+*.out
+*.o
+*.obj
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+*.pdb
+*.ilk
+*.exp
+*.map
+*.stackdump
+
+# Common single-binary names (MinGW examples)
+main
+main.exe
+
+# --- Build folders (common conventions) ---
+/build/
+/bin/
+/obj/
+/out/
+/cmake-build-*/
+
+# --- VS / Windows tooling ---
+.vs/
+*.suo
+*.user
+*.VC.db
+*.VC.VC.opendb
+
+# --- VS Code (keep project configs, ignore caches) ---
+.vscode/*
+!.vscode/c_cpp_properties.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# C/C++ extension cache folders
+.ipch/
+
+# --- App runtime data ---
+SecureDrop_Downloads/
+SecureDrop/SecureDrop_Downloads/

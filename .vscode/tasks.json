@@ -1,0 +1,64 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build (MinGW)",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-std=gnu++14",
+        "-g",
+        "-O0",
+        "-Wall",
+        "-Wextra",
+        "-I.",
+        "main.cpp",
+        "net/client.cpp",
+        "net/server.cpp",
+        "crypto/AES.cpp",
+        "crypto/DES.cpp",
+        "crypto/RSA.cpp",
+        "crypto/SHA512.cpp",
+        "-lws2_32",
+        "-o",
+        "main.exe"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "Run Server",
+      "type": "shell",
+      "command": "${workspaceFolder}\\main.exe",
+      "args": [
+        "server"
+      ],
+      "dependsOn": "Build (MinGW)",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Client",
+      "type": "shell",
+      "command": "${workspaceFolder}\\main.exe",
+      "args": [
+        "client"
+      ],
+      "dependsOn": "Build (MinGW)",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": []
+    }
+  ]
+}

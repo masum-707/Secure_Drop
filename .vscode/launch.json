@@ -1,0 +1,35 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Server (MinGW gdb)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}\\main.exe",
+      "args": [
+        "server"
+      ],
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Build (MinGW)",
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe",
+      "externalConsole": true,
+      "stopAtEntry": false
+    },
+    {
+      "name": "Debug Client (MinGW gdb)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}\\main.exe",
+      "args": [
+        "client"
+      ],
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "Build (MinGW)",
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:\\MinGW\\bin\\gdb.exe",
+      "externalConsole": true,
+      "stopAtEntry": false
+    }
+  ]
+}
